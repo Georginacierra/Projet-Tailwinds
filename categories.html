@@ -93,7 +93,7 @@
         id="All"
       />
 
-      <div role="tabpanel" class="tab-content p-4" id="nature">
+      <div role="tabpanel" class="tab-content p-4">
         <h2 class="text-xl font-bold">Movies of Nature</h2>
         <p>Beautiful documentaries and short films about nature.</p>
       </div>
@@ -120,8 +120,87 @@
       />
 
       <div role="tabpanel" class="tab-content p-4">
-        <h2 class="text-xl font-bold">Movies of Love</h2>
-        <p>Beautiful documentaries and short films about nature.</p>
+        <div
+          class="h-80 md:h-100 w-full bg-[url(ghibli/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center"
+        >
+          <h2 class="text-xl md:text-3xl font-nunito--bold-">
+            Aventures fantastiques
+          </h2>
+        </div>
+
+        <section class="mt-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:mx-12"
+          >
+            <div class="relative">
+              <img
+                src="./ghibli/chateau-film.webp"
+                alt="chateau"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Le Château dans le ciel</h3>
+                <p>Une aventure sur l’amour, la magie et la liberté.</p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img
+                src="./ghibli/chateau-film.webp"
+                alt="chateau"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Le Château dans le ciel</h3>
+                <p>Une aventure sur l’amour, la magie et la liberté.</p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img
+                src="./ghibli/chateau-film.webp"
+                alt="chateau"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Le Château dans le ciel</h3>
+                <p>Une aventure sur l’amour, la magie et la liberté.</p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img
+                src="./ghibli/chateau-film.webp"
+                alt="chateau"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Le Château dans le ciel</h3>
+                <p>Une aventure sur l’amour, la magie et la liberté.</p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       <input
@@ -158,8 +237,6 @@
         const targetTab = document.getElementById(hash);
         if (targetTab) targetTab.checked = true;
       }
-
-      console.log(window.location.hash);
     </script>
   </body>
 </html>
