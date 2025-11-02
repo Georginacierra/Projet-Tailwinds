@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=BBH+Sans+Bogle&family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=BBH+Sans+Bogle&family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Films Ghibli</title>
+  </head>
+  <body font-family: var(--font-sans)>
+    <header>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Accueil</a></li>
+              <li><a>Catégories</a></li>
+              <li><a>Ton opinion</a></li>
+            </ul>
+          </div>
+          <img
+            src="./ghibli/logo-ghibli.png"
+            alt="profil-photo"
+            class="w-20 h-7 md:w-40.5 md:h-14"
+          />
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Accueil</a></li>
+            <li><a>Catégories</a></li>
+            <li><a>Ton opinion</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <img
+            src="./ghibli/Generic-avatar.png"
+            alt="profil-photo"
+            class="w-8 h-8 md:w-13 md:h-13"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="carousel w-full">
+      <div
+        id="slide1"
+        class="carousel-item relative w-full flex flex-row items-center justify-center md:justify-end bg-[url(ghibli/lechateau-banner.webp)] bg-cover bg-center h-96"
+      >
+        <div class="md:mr-30 h-full flex flex-col justify-center items-center">
+          <h2 class="text-xl md:text-3xl font-nunito--bold--dark">
+            Le château ambulant
+          </h2>
+          <h3 class="text-base md:text-lg font-nunito--light--dark">
+            Un voyage entre ciel et cœur
+          </h3>
+          <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+            Explore les secrets du film
+          </button>
+        </div>
+        <div
+          class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+        >
+          <a
+            href="#slide3"
+            class="btn btn-circle bg-(--color-primary) border-hidden"
+            >❮</a
+          >
+          <a
+            href="#slide2"
+            class="btn btn-circle bg-(--color-primary) border-hidden"
+            >❯</a
+          >
+        </div>
+      </div>
+
+      <div
+        id="slide2"
+        class="carousel-item relative w-full flex items-center justify-center md:justify-end bg-[url(ghibli/ponyo-banner.webp)] bg-cover bg-center h-96"
+      >
+        <div class="md:mr-30 h-full flex flex-col justify-center items-center">
+          <h2 class="text-xl md:text-3xl font-nunito--bold--light">
+            Ponyo sur la falaise
+          </h2>
+          <h3 class="text-base md:text-lg font-nunito--light--light">
+            Quand la mer s’éveille à la magie
+          </h3>
+          <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+            Explore les secrets du film
+          </button>
+        </div>
+        <div
+          class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+        >
+          <a
+            href="#slide1"
+            class="btn btn-circle bg-(--color-primary) border-hidden"
+            >❮</a
+          >
+          <a
+            href="#slide3"
+            class="btn btn-circle bg-(--color-primary) border-hidden"
+            >❯</a
+          >
+        </div>
+      </div>
+
+      <div
+        id="slide3"
+        class="carousel-item relative w-full flex items-center justify-center md:justify-end bg-[url(ghibli/totoro-banner.webp)] bg-cover bg-center h-96"
+      >
+        <div class="md:mr-30 flex flex-col justify-center items-center">
+          <h2 class="text-xl md:text-3xl font-nunito--bold--light">
+            Mon voisin Totoro
+          </h2>
+          <h3 class="text-base md:text-lg font-nunito--light--light">
+            Là où la forêt garde ses secrets
+          </h3>
+          <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+            Explore les secrets du film
+          </button>
+        </div>
+        <div
+          class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+        >
+          <a
+            href="#slide2"
+            class="btn btn-circle bg-(--color-primary) border-hidden"
+            >❮</a
+          >
+          <a
+            href="#slide1"
+            class="btn btn-circle bg-(--color-primary) border-hidden"
+            >❯</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- section cards -->
+
+    <section class="mt-4">
+      <h2 class="text-2xl text-center mb-8 m">Les inoubliables Ghibli</h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:mx-12"
+      >
+        <div class="relative">
+          <img
+            src="./ghibli/chateau-film.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+              Voir plus
+            </button>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/chateau-film.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+              Voir plus
+            </button>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/chateau-film.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+              Voir plus
+            </button>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/chateau-film.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+              Voir plus
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- categories section -->
+
+    <section class="mb-20">
+      <h2 class="text-2xl text-center mt-20 mb-8">Categories</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:mx-12"
+      >
+        <div class="relative">
+          <img
+            src="./ghibli/chateau-film.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <!-- <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+              Voir plus
+            </button> -->
+            <a
+              href="categories.html#Aventures"
+              class="btn bg-(--color-primary) mt-1.5 border-hidden"
+            >
+              Voir plus
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/chateau-film.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <a
+              href="categories.html#Nature"
+              class="btn bg-(--color-primary) mt-1.5 border-hidden"
+            >
+              Voir plus
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/chateau-film.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <a
+              href="categories.html#Histoires"
+              class="btn bg-(--color-primary) mt-1.5 border-hidden"
+            >
+              Voir plus
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10"
+    >
+      <img src="./ghibli/logo-ghibli.png" alt="Logo" class="w-40 h-14 mb-0.5" />
+      <p class="text-base">
+        “Les souvenirs ne s’effacent jamais, ils sommeillent.” — Le Voyage de
+        Chihiro
+      </p>
+      <nav class="grid grid-flow-col gap-2">
+        <a class="link link-hover">Categories</a>
+        <a class="link link-hover">Ton opinion</a>
+      </nav>
+      <aside>
+        <p>Ce site est un hommage au Studio Ghibli - GeorginaCierra@ 2025</p>
+      </aside>
+    </footer>
+  </body>
+</html>

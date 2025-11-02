@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=BBH+Sans+Bogle&family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=BBH+Sans+Bogle&family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Films Ghibli</title>
+  </head>
+  <body font-family: var(--font-sans)>
+    <header>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Accueil</a></li>
+              <li><a>Catégories</a></li>
+              <li><a>Ton opinion</a></li>
+            </ul>
+          </div>
+          <img
+            src="./ghibli/logo-ghibli.png"
+            alt="profil-photo"
+            class="w-20 h-7 md:w-40.5 md:h-14"
+          />
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Accueil</a></li>
+            <li><a>Catégories</a></li>
+            <li><a>Ton opinion</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <img
+            src="./ghibli/Generic-avatar.png"
+            alt="profil-photo"
+            class="w-8 h-8 md:w-13 md:h-13"
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- category secction -->
+
+    <section class="tabs tabs-box">
+      <!-- TODO:agregar input all -->
+      <input
+        type="radio"
+        name="my_tabs_1"
+        class="tab peer/tab1"
+        aria-label="toutes catégories"
+        checked="checked"
+        id="All"
+      />
+
+      <div role="tabpanel" class="tab-content p-4" id="nature">
+        <h2 class="text-xl font-bold">Movies of Nature</h2>
+        <p>Beautiful documentaries and short films about nature.</p>
+      </div>
+
+      <input
+        type="radio"
+        name="my_tabs_1"
+        class="tab peer/tab2"
+        aria-label="Aventures fantastiques"
+        id="Aventures"
+      />
+
+      <div role="tabpanel" class="tab-content p-4">
+        <h2 class="text-xl font-bold">Movies of Something</h2>
+        <p>Beautiful documentaries and short films about nature.</p>
+      </div>
+
+      <input
+        type="radio"
+        name="my_tabs_1"
+        class="tab peer/tab3"
+        aria-label="Nature et esprit"
+        id="Nature"
+      />
+
+      <div role="tabpanel" class="tab-content p-4">
+        <h2 class="text-xl font-bold">Movies of Love</h2>
+        <p>Beautiful documentaries and short films about nature.</p>
+      </div>
+
+      <input
+        type="radio"
+        name="my_tabs_1"
+        class="tab peer/tab3"
+        aria-label="Histoires du quotidien"
+        id="Histoires"
+      />
+
+      <div role="tabpanel" class="tab-content p-4">
+        <h2 class="text-xl font-bold">Movies of Love</h2>
+        <p>Beautiful documentaries and short films about nature.</p>
+      </div>
+
+      <input
+        type="radio"
+        name="my_tabs_1"
+        class="tab peer/tab3"
+        aria-label="Les Les inoubliables Ghibli"
+        id="Inoubliables"
+      />
+
+      <div role="tabpanel" class="tab-content p-4">
+        <h2 class="text-xl font-bold">Movies of Love</h2>
+        <p>Beautiful documentaries and short films about nature.</p>
+      </div>
+    </section>
+
+    <!-- script for category selection  -->
+    <script>
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        const targetTab = document.getElementById(hash);
+        if (targetTab) targetTab.checked = true;
+      }
+
+      console.log(window.location.hash);
+    </script>
+  </body>
+</html>
