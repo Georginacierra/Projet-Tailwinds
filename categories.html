@@ -52,13 +52,13 @@
               tabindex="-1"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              <li><a>Accueil</a></li>
-              <li><a>Catégories</a></li>
-              <li><a>Ton opinion</a></li>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="categories.html">Catégories</a></li>
+              <li><a href="opinion.html">Ton opinion</a></li>
             </ul>
           </div>
           <img
-            src="./ghibli/logo-ghibli.png"
+            src="./ghibli/assets/logo-ghibli.png"
             alt="profil-photo"
             class="w-20 h-7 md:w-40.5 md:h-14"
           />
@@ -72,7 +72,7 @@
         </div>
         <div class="navbar-end">
           <img
-            src="./ghibli/Generic-avatar.png"
+            src="./ghibli/assets/Generic-avatar.png"
             alt="profil-photo"
             class="w-8 h-8 md:w-13 md:h-13"
           />
@@ -83,7 +83,6 @@
     <!-- category secction -->
 
     <section class="tabs tabs-box">
-      <!-- TODO:agregar input all -->
       <input
         type="radio"
         name="my_tabs_1"
@@ -94,16 +93,12 @@
       />
 
       <div role="tabpanel" class="tab-content p-4">
-        <div
-          class="h-80 md:h-100 w-full bg-[url(ghibli/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center"
-        >
-          <h2 class="text-xl md:text-3xl font-nunito--bold-">
-            Toutes les catégories
-          </h2>
-        </div>
+        <h2 class="text-xl md:text-3xl font-nunito--bold- text-center">
+          Toutes les catégories
+        </h2>
 
         <div
-          class="h-80 md:h-100 w-full bg-[url(ghibli/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center mt-8"
+          class="h-80 md:h-100 w-full bg-[url(ghibli/aventures/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center mt-8"
         >
           <h2 class="text-xl md:text-3xl font-nunito--bold-">
             Aventures fantastiques
@@ -255,7 +250,7 @@
         </section>
 
         <div
-          class="h-80 md:h-100 w-full bg-[url(ghibli/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center mt-8"
+          class="h-80 md:h-100 w-full bg-[url(ghibli/histoires/histoires-banner.webp)] bg-cover bg-center flex flex-row items-center justify-center mt-8"
         >
           <h2 class="text-xl md:text-3xl font-nunito--bold-">
             Histoires du quotidien
@@ -320,6 +315,91 @@
             </div>
           </div>
         </section>
+
+        <div
+          class="h-80 md:h-100 w-full bg-[url(ghibli/best/best.webp)] bg-cover bg-center flex flex-row items-center justify-center mt-8"
+        >
+          <h2 class="text-xl md:text-3xl font-nunito--bold-">
+            Les inoubliables Ghibli
+          </h2>
+        </div>
+        <section class="mt-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:mx-12"
+          >
+            <div class="relative">
+              <img
+                src="./ghibli/best/château-ambulant.webp"
+                alt="Le Château ambulant, Sohpie and Howl in landscape"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Le Château dans le ciel</h3>
+                <p>Une aventure sur l’amour, la magie et la liberté.</p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img
+                src="./ghibli/best/totoro-umbrella.webp"
+                alt="Mon Voisin Totoro, Totori with umbrella"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Mon Voisin Totoro</h3>
+                <p>
+                  Deux sœurs découvrent la nature et la magie à travers Totoro
+                </p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img
+                src="./ghibli/best/arrierty.webp"
+                alt="Arrietty, small red dress girl in the garden"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Arrietty,</h3>
+                <p>Elle est minuscule, mais son monde est grand d’aventures.</p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img
+                src="./ghibli/best/tombeau-film.webp"
+                alt="Le Tombeau des lucioles, two brothers in the night"
+                class="object-cover w-full rounded-xl"
+              />
+              <div
+                class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl"
+              >
+                <h3>Le Tombeau des lucioles</h3>
+                <p>
+                  Un film bouleversant sur l’innocence, et l’amour fraternel
+                </p>
+                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                  Voir plus
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       <input
@@ -332,7 +412,7 @@
 
       <div role="tabpanel" class="tab-content p-4">
         <div
-          class="h-80 md:h-100 w-full bg-[url(ghibli/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center"
+          class="h-80 md:h-100 w-full bg-[url(ghibli/aventures/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center"
         >
           <h2 class="text-xl md:text-3xl font-nunito--bold-">
             Aventures fantastiques
@@ -356,9 +436,148 @@
                   Une jeune fille se retrouve dans un monde magique peuplé
                   d’esprits.
                 </p>
-                <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+                <!-- Open the modal using ID.showModal() method -->
+                <button
+                  class="btn bg-(--color-primary) mt-1.5 border-hidden"
+                  onclick="my_modal_5.showModal()"
+                >
                   Voir plus
                 </button>
+                <dialog
+                  id="my_modal_5"
+                  class="modal modal-bottom sm:modal-middle"
+                >
+                  <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+                    <form method="dialog">
+                      <button
+                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                      >
+                        ✕
+                      </button>
+                    </form>
+                    <h3 class="text-lg font-bold text-center mb-8">
+                      Le Voyage de Chihiro
+                    </h3>
+                    <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                      <div class="flex justify-center">
+                        <img
+                          src="./ghibli/aventures/château-ambulant.webp"
+                          alt="château-ambulant"
+                          class="w-150"
+                        />
+                      </div>
+                      <article class="P-8">
+                        <p>Anée: 2001</p>
+                        <p>Durée: 2h 16min</p>
+                        <p>Réalisateur: nom</p>
+                        <div class="mt-3">
+                          <h4 class="text-l font-bold">Description</h4>
+                          <p>
+                            Une jeune fille se retrouve dans un monde magique
+                            peuplé d’esprits. Pour sauver ses parents
+                            transformés en cochons, elle doit faire preuve de
+                            courage et de persévérance. 
+                          </p>
+                        </div>
+                        <div class="mt-3">
+                          <p>Langue- sous-titres</p>
+                          <div class="badge badge-primary">FR</div>
+                          <div class="badge badge-secondary">EN</div>
+                          <div class="badge badge-accent">ES</div>
+                        </div>
+
+                        <div class="mt-3">
+                          <p>Langue- sous-titres</p>
+                          <div class="badge badge-primary">4K</div>
+                          <div class="badge badge-secondary">HD</div>
+                          <div class="badge badge-accent">HDR</div>
+                        </div>
+
+                        <p class="mt-3">Avis</p>
+                        <div class="flex flex-row">
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-12"
+                          />
+                        </div>
+
+                        <p class="mt-3">Disponible sur</p>
+                        <div class="flex flex-row gap-2.5">
+                          <img
+                            src="./ghibli/modale/disney.webp"
+                            alt="avis star icon"
+                            class="w-12"
+                          />
+                          <img
+                            src="./ghibli/modale/apple-tv.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/netflix.webp"
+                            alt="avis star icon"
+                            class="w-12"
+                          />
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-3 mt-4">
+                          La voix des spectateurs
+                        </h3>
+                        <p class="font-medium">name</p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Turpis ac
+                          malesuada lectus egestas. Nunc arcu lacus tellus
+                          tristique ornare consectetur aliquet.
+                        </p>
+                        <p class="font-medium mt-2">name</p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Turpis ac
+                          malesuada lectus egestas. Nunc arcu lacus tellus
+                          tristique ornare consectetur aliquet.
+                        </p>
+                        <div
+                          class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                        >
+                          <h3 class="text-lg font-bold text-center">
+                            Donne ton avis?
+                          </h3>
+                          <p class="text-center">
+                            Clique sur le bouton ci-dessous pour remplir le
+                            formulaire
+                          </p>
+                          <button
+                            class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                          >
+                            <a href="opinion.html"
+                              >Explore les secrets du film
+                            </a>
+                          </button>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </dialog>
               </div>
             </div>
 
@@ -504,7 +723,7 @@
 
       <div role="tabpanel" class="tab-content p-4">
         <div
-          class="h-80 md:h-100 w-full bg-[url(ghibli/aventure.webp)] bg-cover bg-center flex flex-row items-center justify-center"
+          class="h-80 md:h-100 w-full bg-[url(ghibli/histoires/histoires-banner.webp)] bg-cover bg-center flex flex-row items-center justify-center"
         >
           <h2 class="text-xl md:text-3xl font-nunito--bold-">
             Histoires du quotidien
@@ -581,7 +800,7 @@
 
       <div role="tabpanel" class="tab-content p-4">
         <div
-          class="h-80 md:h-100 w-full bg-[url(ghibli/inoubliables /inoubliables.webp)] bg-cover bg-center flex flex-row items-center justify-center"
+          class="h-80 md:h-100 w-full bg-[url(ghibli/best/best.webp)] bg-cover bg-center flex flex-row items-center justify-center"
         >
           <h2 class="text-xl md:text-3xl font-nunito--bold-">
             Les inoubliables Ghibli
@@ -593,7 +812,7 @@
           >
             <div class="relative">
               <img
-                src="./ghibli/inoubliables /château-ambulant.webp"
+                src="./ghibli/best/château-ambulant.webp"
                 alt="Le Château ambulant, Sohpie and Howl in landscape"
                 class="object-cover w-full rounded-xl"
               />
@@ -610,7 +829,7 @@
 
             <div class="relative">
               <img
-                src="./ghibli/inoubliables /totoro-umbrella.webp"
+                src="./ghibli/best/totoro-umbrella.webp"
                 alt="Mon Voisin Totoro, Totori with umbrella"
                 class="object-cover w-full rounded-xl"
               />
@@ -629,7 +848,7 @@
 
             <div class="relative">
               <img
-                src="./ghibli/inoubliables /arrierty.webp"
+                src="./ghibli/best/arrierty.webp"
                 alt="Arrietty, small red dress girl in the garden"
                 class="object-cover w-full rounded-xl"
               />
@@ -646,7 +865,7 @@
 
             <div class="relative">
               <img
-                src="./ghibli/inoubliables /tombeau-film.webp"
+                src="./ghibli/best/tombeau-film.webp"
                 alt="Le Tombeau des lucioles, two brothers in the night"
                 class="object-cover w-full rounded-xl"
               />

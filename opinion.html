@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=BBH+Sans+Bogle&family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=BBH+Sans+Bogle&family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Films Ghibli</title>
+  </head>
+
+  <body>
+    <h3 class="text-lg font-bold text-center mb-8">Donne mon avis du film</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="flex justify-center">
+        <img
+          src="./ghibli/aventures/château-ambulant.webp"
+          alt="château-ambulant"
+          class="w-150"
+        />
+      </div>
+      <article class="P-8">
+        <h3 class="text-lg font-bold">Le Voyage de Chihiro</h3>
+        <p>Anée: 2001</p>
+        <p>Durée: 2h 16min</p>
+        <p>Réalisateur: nom</p>
+        <div class="mt-3">
+          <h4 class="text-l font-bold">Description</h4>
+          <p>
+            Une jeune fille se retrouve dans un monde magique peuplé d’esprits.
+            Pour sauver ses parents transformés en cochons, elle doit faire
+            preuve de courage et de persévérance. 
+          </p>
+        </div>
+        <div class="mt-3">
+          <p>Langue- sous-titres</p>
+          <div class="badge badge-primary">FR</div>
+          <div class="badge badge-secondary">EN</div>
+          <div class="badge badge-accent">ES</div>
+        </div>
+
+        <div class="mt-3">
+          <p>Langue- sous-titres</p>
+          <div class="badge badge-primary">4K</div>
+          <div class="badge badge-secondary">HD</div>
+          <div class="badge badge-accent">HDR</div>
+        </div>
+
+        <p class="mt-3">Avis</p>
+        <div class="flex flex-row">
+          <img
+            src="./ghibli/modale/avis-icon.webp"
+            alt="avis star icon"
+            class="w-14"
+          />
+          <img
+            src="./ghibli/modale/avis-icon.webp"
+            alt="avis star icon"
+            class="w-14"
+          />
+          <img
+            src="./ghibli/modale/avis-icon.webp"
+            alt="avis star icon"
+            class="w-14"
+          />
+          <img
+            src="./ghibli/modale/avis-icon.webp"
+            alt="avis star icon"
+            class="w-14"
+          />
+          <img
+            src="./ghibli/modale/avis-icon.webp"
+            alt="avis star icon"
+            class="w-14"
+          />
+        </div>
+
+        <h3 class="text-lg font-bold mb-3">La voix des spectateurs</h3>
+        <p class="font-medium">name</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Turpis ac malesuada lectus
+          egestas. Nunc arcu lacus tellus tristique ornare consectetur aliquet.
+        </p>
+        <p class="font-medium">name</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Turpis ac malesuada lectus
+          egestas. Nunc arcu lacus tellus tristique ornare consectetur aliquet.
+        </p>
+        <div
+          class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 mt-8"
+        >
+          <h3 class="text-lg font-bold text-center">Donne ton avis?</h3>
+          <p class="text-center">
+            Clique sur le bouton ci-dessous pour remplir le formulaire
+          </p>
+          <button
+            class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+          >
+            Explore les secrets du film
+          </button>
+        </div>
+      </article>
+    </div>
+  </body>
+
+
+
+
+  <button
+                  class="btn bg-(--color-primary) mt-1.5 border-hidden"
+                  onclick="my_modal_3.showModal()"
+                >
+                  Voir plus
+                </button>
+
+                <dialog id="my_modal_3" class="modal">
+                  <div class="modal-box">
+                    <form method="dialog">
+                      <button
+                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                      >
+                        ✕
+                      </button>
+                    </form>
+                    <h3 class="text-lg font-bold text-center mb-8">
+                      Donne mon avis du film
+                    </h3>
+                    <div class="grid grid-cols-1 gap-4">
+                      <div class="flex justify-center">
+                        <img
+                          src="./ghibli/aventures/château-ambulant.webp"
+                          alt="château-ambulant"
+                          class="w-150"
+                        />
+                      </div>
+                      <article class="P-8">
+                        <h3 class="text-lg font-bold">Le Voyage de Chihiro</h3>
+                        <p>Anée: 2001</p>
+                        <p>Durée: 2h 16min</p>
+                        <p>Réalisateur: nom</p>
+                        <div class="mt-3">
+                          <h4 class="text-l font-bold">Description</h4>
+                          <p>
+                            Une jeune fille se retrouve dans un monde magique
+                            peuplé d’esprits. Pour sauver ses parents
+                            transformés en cochons, elle doit faire preuve de
+                            courage et de persévérance. 
+                          </p>
+                        </div>
+                        <div class="mt-3">
+                          <p>Langue- sous-titres</p>
+                          <div class="badge badge-primary">FR</div>
+                          <div class="badge badge-secondary">EN</div>
+                          <div class="badge badge-accent">ES</div>
+                        </div>
+
+                        <div class="mt-3">
+                          <p>Langue- sous-titres</p>
+                          <div class="badge badge-primary">4K</div>
+                          <div class="badge badge-secondary">HD</div>
+                          <div class="badge badge-accent">HDR</div>
+                        </div>
+
+                        <p class="mt-3">Avis</p>
+                        <div class="flex flex-row">
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                          <img
+                            src="./ghibli/modale/avis-icon.webp"
+                            alt="avis star icon"
+                            class="w-14"
+                          />
+                        </div>
+
+                        <h3 class="text-lg font-bold mb-3">
+                          La voix des spectateurs
+                        </h3>
+                        <p class="font-medium">name</p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Turpis ac
+                          malesuada lectus egestas. Nunc arcu lacus tellus
+                          tristique ornare consectetur aliquet.
+                        </p>
+                        <p class="font-medium">name</p>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Turpis ac
+                          malesuada lectus egestas. Nunc arcu lacus tellus
+                          tristique ornare consectetur aliquet.
+                        </p>
+                        <div
+                          class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 mt-8"
+                        >
+                          <h3 class="text-lg font-bold text-center">
+                            Donne ton avis?
+                          </h3>
+                          <p class="text-center">
+                            Clique sur le bouton ci-dessous pour remplir le
+                            formulaire
+                          </p>
+                          <button
+                            class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                          >
+                            Explore les secrets du film
+                          </button>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </dialog>
+</html>
