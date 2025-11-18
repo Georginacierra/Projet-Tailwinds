@@ -29,6 +29,62 @@
   </head>
 
   <body>
+    <!-- nav bar -->
+    <nav
+      class="navbar pr-8 pl-8 fixed top-0 left-0 right-0 z-50 bg-base-100/50 backdrop-blur-sm shadow-sm"
+    >
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="categories.html">Catégories</a></li>
+            <li><a href="opinion.html">Ton opinion</a></li>
+          </ul>
+        </div>
+
+        <a href="index.html"
+          ><img
+            src="./ghibli/assets/logo-ghibli.png"
+            alt="profil-photo"
+            class="w-20 h-7 md:w-40.5 md:h-14"
+            loading="lazy"
+        /></a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="categories.html">Catégories</a></li>
+          <li><a href="opinion.html">Ton opinion</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <img
+          src="./ghibli/assets/Generic-avatar.png"
+          alt="profil-photo"
+          class="w-8 h-8 md:w-13 md:h-13"
+          loading="lazy"
+        />
+      </div>
+    </nav>
     <div
       class="bg-(--color-base-300) w-5/6 p-6 md:w-2/3 md:p-10 flex flex-col m-auto"
     >
@@ -41,7 +97,6 @@
           <img src="./ghibli/opinion/opinion-totoro.webp" loading="lazy" />
         </div>
       </div>
-      <!-- TODO: add att lazy for the images -->
       <fieldset class="fieldset">
         <legend class="fieldset-legend">Nom</legend>
         <input type="text" class="input w-full" placeholder="Écris ton nom" />

@@ -30,7 +30,9 @@
   <body font-family: var(--font-sans)>
     <header>
       <!-- nav bar -->
-      <div class="navbar bg-base-100 shadow-sm">
+      <nav
+        class="navbar pr-8 pl-8 fixed top-0 left-0 right-0 z-50 bg-base-100/50 backdrop-blur-sm shadow-sm"
+      >
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -57,13 +59,15 @@
               <li><a href="categories.html">Catégories</a></li>
               <li><a href="opinion.html">Ton opinion</a></li>
             </ul>
-            <!-- TODO nav bar not working -->
           </div>
-          <img
-            src="./ghibli/assets/logo-ghibli.png"
-            alt="profil-photo"
-            class="w-20 h-7 md:w-40.5 md:h-14"
-          />
+
+          <a href="index.html"
+            ><img
+              src="./ghibli/assets/logo-ghibli.png"
+              alt="profil-photo"
+              class="w-20 h-7 md:w-40.5 md:h-14"
+              loading="lazy"
+          /></a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -77,9 +81,10 @@
             src="./ghibli/assets/Generic-avatar.png"
             alt="profil-photo"
             class="w-8 h-8 md:w-13 md:h-13"
+            loading="lazy"
           />
         </div>
-      </div>
+      </nav>
     </header>
 
     <!-- carrousel -->
@@ -95,9 +100,157 @@
           <h3 class="text-base md:text-lg font-nunito--light--dark">
             Un voyage entre ciel et cœur
           </h3>
-          <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+          <button
+            class="btn bg-(--color-primary) mt-1.5 border-hidden"
+            onclick="modal_chateau_amboulant.showModal()"
+          >
             Explore les secrets du film
           </button>
+          <dialog
+            id="modal_chateau_amboulant"
+            class="modal modal-bottom sm:modal-middle"
+          >
+            <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold text-center mb-8">
+                Le Château ambulant
+              </h3>
+              <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                <div class="w-96 m-auto md:w-full h-full">
+                  <img
+                    src="./ghibli/aventures/château-ambulant.webp"
+                    alt="Le Château ambulant, Sohpie and Howl in landscape"
+                    class="object-cover h-full w-full m-auto"
+                    loading="lazy"
+                  />
+                </div>
+                <article class="P-8">
+                  <p>Anée: 2004</p>
+                  <p>Durée: 1 h 59 min</p>
+                  <p>Réalisateur: Hayao Miyazaki</p>
+                  <div class="mt-3">
+                    <h4 class="text-l font-bold">Description</h4>
+                    <p>
+                      Sophie, transformée en vieille femme par un sortilège,
+                      rencontre Hauru, un magicien mystérieux vivant dans un
+                      château qui marche. Une aventure sur l’amour, la magie et
+                      la liberté.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <p>Langue- sous-titres</p>
+                    <div class="badge badge-primary">FR</div>
+                    <div class="badge badge-secondary">EN</div>
+                    <div class="badge badge-accent">ES</div>
+                  </div>
+
+                  <div class="mt-3">
+                    <p>Langue- sous-titres</p>
+                    <div class="badge badge-primary">4K</div>
+                    <div class="badge badge-secondary">HD</div>
+                    <div class="badge badge-accent">HDR</div>
+                  </div>
+
+                  <p class="mt-3">Avis</p>
+                  <div class="flex flex-row">
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <p class="mt-3">Disponible sur</p>
+                  <div class="flex flex-row gap-2.5">
+                    <img
+                      src="./ghibli/modale/disney.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/apple-tv.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/netflix.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="text-lg font-bold mb-3 mt-4">
+                    La voix des spectateurs
+                  </h3>
+                  <p class="font-medium">Marie</p>
+                  <p>
+                    "Les films du Studio Ghibli ont quelque chose d’unique : ils
+                    arrivent toujours à me transporter dans un autre monde. Que
+                    ce soit l’émotion, la poésie ou la beauté des paysages,
+                    chaque film me donne cette sensation d’évasion totale. C’est
+                    un véritable refuge pour l’imagination."
+                  </p>
+                  <p class="font-medium mt-2">Thomas</p>
+                  <p>
+                    "J’aime la sensibilité des films Ghibli. Ils parlent de la
+                    nature, de l’enfance, de la solitude, de la magie… mais
+                    toujours avec douceur et profondeur. Peu importe le film que
+                    je regarde, je ressors avec le cœur léger et rempli
+                    d’inspiration. C’est ce qui rend ce studio si spécial."
+                  </p>
+                  <div
+                    class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                  >
+                    <h3 class="text-lg font-bold text-center">
+                      Donne ton avis?
+                    </h3>
+                    <p class="text-center">
+                      Clique sur le bouton ci-dessous pour remplir le formulaire
+                    </p>
+                    <button
+                      class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                    >
+                      <a href="opinion.html" class="w-full">Donner mon avis </a>
+                    </button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </dialog>
         </div>
         <div
           class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
@@ -120,15 +273,155 @@
         class="carousel-item relative w-full flex items-center justify-center md:justify-end bg-[url(ghibli/assets/ponyo-banner.webp)] bg-cover bg-center h-96"
       >
         <div class="md:mr-30 h-full flex flex-col justify-center items-center">
-          <h2 class="text-xl md:text-3xl font-nunito--bold--light">
-            Ponyo sur la falaise
-          </h2>
+          <h2 class="text-xl md:text-3xl font-nunito--bold--light">Ponyo</h2>
           <h3 class="text-base md:text-lg font-nunito--light--light">
             Quand la mer s’éveille à la magie
           </h3>
-          <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
-            Explore les secrets du film
+          <button
+            class="btn bg-(--color-primary) mt-1.5 border-hidden"
+            onclick="modal_ponyo.showModal()"
+          >
+            Voir plus
           </button>
+          <dialog id="modal_ponyo" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold text-center mb-8">Ponyo</h3>
+              <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                <div class="w-96 m-auto md:w-full h-full">
+                  <img
+                    src="./ghibli/aventures/ponyo-film.webp"
+                    alt="Ponyo, Ponyo in the ship, river landscape"
+                    class="object-cover h-full w-full m-auto"
+                    loading="lazy"
+                  />
+                </div>
+                <article class="P-8">
+                  <p>Anée: 2008</p>
+                  <p>Durée: 1 h 41 min</p>
+                  <p>Réalisateur: Hayao Miyazaki</p>
+                  <div class="mt-3">
+                    <h4 class="text-l font-bold">Description</h4>
+                    <p>
+                      Ponyo, une petite fille-poisson, rêve de devenir humaine.
+                      Son amitié avec un garçon nommé Sôsuke bouleverse
+                      l’équilibre entre la mer et la terre.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <p>Langue- sous-titres</p>
+                    <div class="badge badge-primary">FR</div>
+                    <div class="badge badge-secondary">EN</div>
+                    <div class="badge badge-accent">ES</div>
+                  </div>
+
+                  <div class="mt-3">
+                    <p>Langue- sous-titres</p>
+                    <div class="badge badge-primary">4K</div>
+                    <div class="badge badge-secondary">HD</div>
+                    <div class="badge badge-accent">HDR</div>
+                  </div>
+
+                  <p class="mt-3">Avis</p>
+                  <div class="flex flex-row">
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <p class="mt-3">Disponible sur</p>
+                  <div class="flex flex-row gap-2.5">
+                    <img
+                      src="./ghibli/modale/disney.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/apple-tv.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/netflix.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="text-lg font-bold mb-3 mt-4">
+                    La voix des spectateurs
+                  </h3>
+                  <p class="font-medium">Marie</p>
+                  <p>
+                    "Les films du Studio Ghibli ont quelque chose d’unique : ils
+                    arrivent toujours à me transporter dans un autre monde. Que
+                    ce soit l’émotion, la poésie ou la beauté des paysages,
+                    chaque film me donne cette sensation d’évasion totale. C’est
+                    un véritable refuge pour l’imagination."
+                  </p>
+                  <p class="font-medium mt-2">Thomas</p>
+                  <p>
+                    "J’aime la sensibilité des films Ghibli. Ils parlent de la
+                    nature, de l’enfance, de la solitude, de la magie… mais
+                    toujours avec douceur et profondeur. Peu importe le film que
+                    je regarde, je ressors avec le cœur léger et rempli
+                    d’inspiration. C’est ce qui rend ce studio si spécial."
+                  </p>
+                  <div
+                    class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                  >
+                    <h3 class="text-lg font-bold text-center">
+                      Donne ton avis?
+                    </h3>
+                    <p class="text-center">
+                      Clique sur le bouton ci-dessous pour remplir le formulaire
+                    </p>
+                    <button
+                      class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                    >
+                      <a href="opinion.html" class="w-full">Donner mon avis </a>
+                    </button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </dialog>
         </div>
         <div
           class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
@@ -157,9 +450,153 @@
           <h3 class="text-base md:text-lg font-nunito--light--light">
             Là où la forêt garde ses secrets
           </h3>
-          <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
-            Explore les secrets du film
+          <button
+            class="btn bg-(--color-primary) mt-1.5 border-hidden"
+            onclick="modal_totoro.showModal()"
+          >
+            Voir plus
           </button>
+          <dialog id="modal_totoro" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold text-center mb-8">
+                Mon Voisin Totoro
+              </h3>
+              <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                <div class="w-96 m-auto md:w-full h-full">
+                  <img
+                    src="./ghibli/nature/totoro-umbrella.webp"
+                    alt="Mon Voisin Totoro, Totori with umbrella"
+                    class="object-cover h-full w-full m-auto"
+                    loading="lazy"
+                  />
+                </div>
+                <article class="P-8">
+                  <p>Anée: 1988</p>
+                  <p>Durée: 1 h 26 min</p>
+                  <p>Réalisateur: Hayao Miyazaki</p>
+                  <div class="mt-3">
+                    <h4 class="text-l font-bold">Description</h4>
+                    <p>
+                      Deux sœurs découvrent la nature et la magie à travers
+                      Totoro, un esprit bienveillant de la forêt. Un film doux
+                      et plein de tendresse.
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <p>Langue- sous-titres</p>
+                    <div class="badge badge-primary">FR</div>
+                    <div class="badge badge-secondary">EN</div>
+                    <div class="badge badge-accent">ES</div>
+                  </div>
+
+                  <div class="mt-3">
+                    <p>Langue- sous-titres</p>
+                    <div class="badge badge-primary">4K</div>
+                    <div class="badge badge-secondary">HD</div>
+                    <div class="badge badge-accent">HDR</div>
+                  </div>
+
+                  <p class="mt-3">Avis</p>
+                  <div class="flex flex-row">
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/avis-icon.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <p class="mt-3">Disponible sur</p>
+                  <div class="flex flex-row gap-2.5">
+                    <img
+                      src="./ghibli/modale/disney.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/apple-tv.webp"
+                      alt="avis star icon"
+                      class="w-14"
+                      loading="lazy"
+                    />
+                    <img
+                      src="./ghibli/modale/netflix.webp"
+                      alt="avis star icon"
+                      class="w-12"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <h3 class="text-lg font-bold mb-3 mt-4">
+                    La voix des spectateurs
+                  </h3>
+                  <p class="font-medium">Marie</p>
+                  <p>
+                    "Les films du Studio Ghibli ont quelque chose d’unique : ils
+                    arrivent toujours à me transporter dans un autre monde. Que
+                    ce soit l’émotion, la poésie ou la beauté des paysages,
+                    chaque film me donne cette sensation d’évasion totale. C’est
+                    un véritable refuge pour l’imagination."
+                  </p>
+                  <p class="font-medium mt-2">Thomas</p>
+                  <p>
+                    "J’aime la sensibilité des films Ghibli. Ils parlent de la
+                    nature, de l’enfance, de la solitude, de la magie… mais
+                    toujours avec douceur et profondeur. Peu importe le film que
+                    je regarde, je ressors avec le cœur léger et rempli
+                    d’inspiration. C’est ce qui rend ce studio si spécial."
+                  </p>
+                  <div
+                    class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                  >
+                    <h3 class="text-lg font-bold text-center">
+                      Donne ton avis?
+                    </h3>
+                    <p class="text-center">
+                      Clique sur le bouton ci-dessous pour remplir le formulaire
+                    </p>
+                    <button
+                      class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                    >
+                      <a href="opinion.html" class="w-full">Donner mon avis </a>
+                    </button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </dialog>
         </div>
         <div
           class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
@@ -178,127 +615,49 @@
       </div>
     </div>
 
-    <!-- section cards -->
-
-    <section class="mt-4">
-      <h2 class="text-2xl text-center mb-8 m">Les inoubliables Ghibli</h2>
-
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:mx-12"
-      >
-        <div class="relative">
-          <img
-            src="./ghibli/assets/chateau-film.webp"
-            alt="chateau"
-            class="object-cover w-full rounded-xl"
-          />
-          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
-            <h3>Le Château dans le ciel</h3>
-            <p>Une aventure sur l’amour, la magie et la liberté.</p>
-            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
-              Voir plus
-            </button>
-          </div>
-        </div>
-
-        <div class="relative">
-          <img
-            src="./ghibli/assets/chateau-film.webp"
-            alt="chateau"
-            class="object-cover w-full rounded-xl"
-          />
-          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
-            <h3>Le Château dans le ciel</h3>
-            <p>Une aventure sur l’amour, la magie et la liberté.</p>
-            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
-              Voir plus
-            </button>
-          </div>
-        </div>
-
-        <div class="relative">
-          <img
-            src="./ghibli/assets/chateau-film.webp"
-            alt="chateau"
-            class="object-cover w-full rounded-xl"
-          />
-          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
-            <h3>Le Château dans le ciel</h3>
-            <p>Une aventure sur l’amour, la magie et la liberté.</p>
-            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
-              Voir plus
-            </button>
-          </div>
-        </div>
-
-        <div class="relative">
-          <img
-            src="./ghibli/assets/chateau-film.webp"
-            alt="chateau"
-            class="object-cover w-full rounded-xl"
-          />
-          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
-            <h3>Le Château dans le ciel</h3>
-            <p>Une aventure sur l’amour, la magie et la liberté.</p>
-            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
-              Voir plus
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- categories section -->
 
-    <section class="mb-20">
-      <h2 class="text-2xl text-center mt-20 mb-8">Categories</h2>
+    <section class="mb-20 mt-10 md:mt-20">
+      <h2 class="text-2xl text-center mb-8">Categories</h2>
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:mx-12"
       >
-        <div class="relative">
+        <div class="relative mt-3 md:mt-0">
           <img
-            src="./ghibli/assets/chateau-film.webp"
-            alt="chateau"
+            src="./ghibli/aventures/voyage-chihiro.webp"
+            alt="Le Voyage de Chihiro film, chihiro sits in the train with ghost"
             class="object-cover w-full rounded-xl"
+            loading="lazy"
           />
           <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
-            <h3>Le Château dans le ciel</h3>
-            <p>Une aventure sur l’amour, la magie et la liberté.</p>
-            <!-- <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
-              Voir plus
-            </button> -->
-            <a
-              href="categories.html#Aventures"
-              class="btn bg-(--color-primary) mt-1.5 border-hidden"
-            >
-              Voir plus
-            </a>
+            <h3>Aventures fantastiques</h3>
+            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+              <a href="categories.html#aventures">Voir plus</a>
+            </button>
           </div>
         </div>
 
-        <div class="relative">
+        <div class="relative mt-3 md:mt-0">
           <img
-            src="./ghibli/assets/chateau-film.webp"
-            alt="chateau"
+            src="./ghibli/nature/nausicaa.webp"
+            alt="Nausicaä, girl and night landscape"
             class="object-cover w-full rounded-xl"
+            loading="lazy"
           />
           <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
-            <h3>Le Château dans le ciel</h3>
-            <p>Une aventure sur l’amour, la magie et la liberté.</p>
-            <a
-              href="categories.html#Nature"
-              class="btn bg-(--color-primary) mt-1.5 border-hidden"
-            >
-              Voir plus
-            </a>
+            <h3>Nature et esprit</h3>
+            <button class="btn bg-(--color-primary) mt-1.5 border-hidden">
+              <a href="categories.html#nature">Voir plus</a>
+            </button>
           </div>
         </div>
 
-        <div class="relative">
+        <div class="relative mt-3 md:mt-0">
           <img
-            src="./ghibli/assets/chateau-film.webp"
-            alt="chateau"
+            src="./ghibli/histoires/kiki.webp"
+            alt="Kiki la petite sorcière, kiki in the window"
             class="object-cover w-full rounded-xl"
+            loading="lazy"
           />
           <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
             <h3>Le Château dans le ciel</h3>
@@ -309,6 +668,679 @@
             >
               Voir plus
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards section -->
+
+    <section class="mt-4 mb-20">
+      <h2 class="text-2xl text-center mb-8 m">Les inoubliables Ghibli</h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:mx-12"
+      >
+        <div class="relative">
+          <img
+            src="./ghibli/aventures/château-ambulant.webp"
+            alt="Le Château ambulant, Sohpie and Howl in landscape"
+            class="object-cover w-full rounded-xl"
+            loading="lazy"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Château dans le ciel</h3>
+            <p>Une aventure sur l’amour, la magie et la liberté.</p>
+            <button
+              class="btn bg-(--color-primary) mt-1.5 border-hidden"
+              onclick="modal_chateau_amboulant2.showModal()"
+            >
+              Voir plus
+            </button>
+            <dialog
+              id="modal_chateau_amboulant2"
+              class="modal modal-bottom sm:modal-middle"
+            >
+              <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+                <form method="dialog">
+                  <button
+                    class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                  >
+                    ✕
+                  </button>
+                </form>
+                <h3 class="text-lg font-bold text-center mb-8">
+                  Le Château ambulant
+                </h3>
+                <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                  <div class="w-96 m-auto md:w-full h-full">
+                    <img
+                      src="./ghibli/aventures/château-ambulant.webp"
+                      alt="Le Château ambulant, Sohpie and Howl in landscape"
+                      class="object-cover h-full w-full m-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                  <article class="P-8">
+                    <p>Anée: 2004</p>
+                    <p>Durée: 1 h 59 min</p>
+                    <p>Réalisateur: Hayao Miyazaki</p>
+                    <div class="mt-3">
+                      <h4 class="text-l font-bold">Description</h4>
+                      <p>
+                        Sophie, transformée en vieille femme par un sortilège,
+                        rencontre Hauru, un magicien mystérieux vivant dans un
+                        château qui marche. Une aventure sur l’amour, la magie
+                        et la liberté.
+                      </p>
+                    </div>
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">FR</div>
+                      <div class="badge badge-secondary">EN</div>
+                      <div class="badge badge-accent">ES</div>
+                    </div>
+
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">4K</div>
+                      <div class="badge badge-secondary">HD</div>
+                      <div class="badge badge-accent">HDR</div>
+                    </div>
+
+                    <p class="mt-3">Avis</p>
+                    <div class="flex flex-row">
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <p class="mt-3">Disponible sur</p>
+                    <div class="flex flex-row gap-2.5">
+                      <img
+                        src="./ghibli/modale/disney.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/apple-tv.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/netflix.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-3 mt-4">
+                      La voix des spectateurs
+                    </h3>
+                    <p class="font-medium">Marie</p>
+                    <p>
+                      "Les films du Studio Ghibli ont quelque chose d’unique :
+                      ils arrivent toujours à me transporter dans un autre
+                      monde. Que ce soit l’émotion, la poésie ou la beauté des
+                      paysages, chaque film me donne cette sensation d’évasion
+                      totale. C’est un véritable refuge pour l’imagination."
+                    </p>
+                    <p class="font-medium mt-2">Thomas</p>
+                    <p>
+                      "J’aime la sensibilité des films Ghibli. Ils parlent de la
+                      nature, de l’enfance, de la solitude, de la magie… mais
+                      toujours avec douceur et profondeur. Peu importe le film
+                      que je regarde, je ressors avec le cœur léger et rempli
+                      d’inspiration. C’est ce qui rend ce studio si spécial."
+                    </p>
+                    <div
+                      class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                    >
+                      <h3 class="text-lg font-bold text-center">
+                        Donne ton avis?
+                      </h3>
+                      <p class="text-center">
+                        Clique sur le bouton ci-dessous pour remplir le
+                        formulaire
+                      </p>
+                      <button
+                        class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                      >
+                        <a href="opinion.html" class="w-full"
+                          >Donner mon avis
+                        </a>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/nature/totoro-umbrella.webp"
+            alt="Mon Voisin Totoro, Totori with umbrella"
+            class="object-cover w-full rounded-xl"
+            loading="lazy"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Mon Voisin Totoro</h3>
+            <p>Deux sœurs découvrent la nature et la magie à travers Totoro</p>
+            <button
+              class="btn bg-(--color-primary) mt-1.5 border-hidden"
+              onclick="modal_totoro2.showModal()"
+            >
+              Voir plus
+            </button>
+            <dialog
+              id="modal_totoro2"
+              class="modal modal-bottom sm:modal-middle"
+            >
+              <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+                <form method="dialog">
+                  <button
+                    class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                  >
+                    ✕
+                  </button>
+                </form>
+                <h3 class="text-lg font-bold text-center mb-8">
+                  Mon Voisin Totoro
+                </h3>
+                <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                  <div class="w-96 m-auto md:w-full h-full">
+                    <img
+                      src="./ghibli/nature/totoro-umbrella.webp"
+                      alt="Mon Voisin Totoro, Totori with umbrella"
+                      class="object-cover h-full w-full m-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                  <article class="P-8">
+                    <p>Anée: 1988</p>
+                    <p>Durée: 1 h 26 min</p>
+                    <p>Réalisateur: Hayao Miyazaki</p>
+                    <div class="mt-3">
+                      <h4 class="text-l font-bold">Description</h4>
+                      <p>
+                        Deux sœurs découvrent la nature et la magie à travers
+                        Totoro, un esprit bienveillant de la forêt. Un film doux
+                        et plein de tendresse.
+                      </p>
+                    </div>
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">FR</div>
+                      <div class="badge badge-secondary">EN</div>
+                      <div class="badge badge-accent">ES</div>
+                    </div>
+
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">4K</div>
+                      <div class="badge badge-secondary">HD</div>
+                      <div class="badge badge-accent">HDR</div>
+                    </div>
+
+                    <p class="mt-3">Avis</p>
+                    <div class="flex flex-row">
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <p class="mt-3">Disponible sur</p>
+                    <div class="flex flex-row gap-2.5">
+                      <img
+                        src="./ghibli/modale/disney.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/apple-tv.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/netflix.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-3 mt-4">
+                      La voix des spectateurs
+                    </h3>
+                    <p class="font-medium">Marie</p>
+                    <p>
+                      "Les films du Studio Ghibli ont quelque chose d’unique :
+                      ils arrivent toujours à me transporter dans un autre
+                      monde. Que ce soit l’émotion, la poésie ou la beauté des
+                      paysages, chaque film me donne cette sensation d’évasion
+                      totale. C’est un véritable refuge pour l’imagination."
+                    </p>
+                    <p class="font-medium mt-2">Thomas</p>
+                    <p>
+                      "J’aime la sensibilité des films Ghibli. Ils parlent de la
+                      nature, de l’enfance, de la solitude, de la magie… mais
+                      toujours avec douceur et profondeur. Peu importe le film
+                      que je regarde, je ressors avec le cœur léger et rempli
+                      d’inspiration. C’est ce qui rend ce studio si spécial."
+                    </p>
+                    <div
+                      class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                    >
+                      <h3 class="text-lg font-bold text-center">
+                        Donne ton avis?
+                      </h3>
+                      <p class="text-center">
+                        Clique sur le bouton ci-dessous pour remplir le
+                        formulaire
+                      </p>
+                      <button
+                        class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                      >
+                        <a href="opinion.html" class="w-full"
+                          >Donner mon avis
+                        </a>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/histoires/arrierty.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+            loading="lazy"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Arrietty</h3>
+            <p>Une ode à la curiosité et à la différence.</p>
+            <button
+              class="btn bg-(--color-primary) mt-1.5 border-hidden"
+              onclick="modal_arrietty.showModal()"
+            >
+              Voir plus
+            </button>
+            <dialog
+              id="modal_arrietty"
+              class="modal modal-bottom sm:modal-middle"
+            >
+              <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+                <form method="dialog">
+                  <button
+                    class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                  >
+                    ✕
+                  </button>
+                </form>
+                <h3 class="text-lg font-bold text-center mb-8">Arrietty</h3>
+                <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                  <div class="w-96 m-auto md:w-full h-full">
+                    <img
+                      src="./ghibli/histoires/arrierty.webp"
+                      alt="Arrietty, small red dress girl in the garden"
+                      class="object-cover h-full w-full m-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                  <article class="P-8">
+                    <p>Anée: 1988</p>
+                    <p>Durée: 1 h 26 min</p>
+                    <p>Réalisateur: Hayao Miyazaki</p>
+                    <div class="mt-3">
+                      <h4 class="text-l font-bold">Description</h4>
+                      <p>
+                        Deux sœurs découvrent la nature et la magie à travers
+                        Totoro, un esprit bienveillant de la forêt. Un film doux
+                        et plein de tendresse.
+                      </p>
+                    </div>
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">FR</div>
+                      <div class="badge badge-secondary">EN</div>
+                      <div class="badge badge-accent">ES</div>
+                    </div>
+
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">4K</div>
+                      <div class="badge badge-secondary">HD</div>
+                      <div class="badge badge-accent">HDR</div>
+                    </div>
+
+                    <p class="mt-3">Avis</p>
+                    <div class="flex flex-row">
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <p class="mt-3">Disponible sur</p>
+                    <div class="flex flex-row gap-2.5">
+                      <img
+                        src="./ghibli/modale/disney.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/apple-tv.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/netflix.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-3 mt-4">
+                      La voix des spectateurs
+                    </h3>
+                    <p class="font-medium">Marie</p>
+                    <p>
+                      "Les films du Studio Ghibli ont quelque chose d’unique :
+                      ils arrivent toujours à me transporter dans un autre
+                      monde. Que ce soit l’émotion, la poésie ou la beauté des
+                      paysages, chaque film me donne cette sensation d’évasion
+                      totale. C’est un véritable refuge pour l’imagination."
+                    </p>
+                    <p class="font-medium mt-2">Thomas</p>
+                    <p>
+                      "J’aime la sensibilité des films Ghibli. Ils parlent de la
+                      nature, de l’enfance, de la solitude, de la magie… mais
+                      toujours avec douceur et profondeur. Peu importe le film
+                      que je regarde, je ressors avec le cœur léger et rempli
+                      d’inspiration. C’est ce qui rend ce studio si spécial."
+                    </p>
+                    <div
+                      class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                    >
+                      <h3 class="text-lg font-bold text-center">
+                        Donne ton avis?
+                      </h3>
+                      <p class="text-center">
+                        Clique sur le bouton ci-dessous pour remplir le
+                        formulaire
+                      </p>
+                      <button
+                        class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                      >
+                        <a href="opinion.html" class="w-full"
+                          >Donner mon avis
+                        </a>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </dialog>
+          </div>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./ghibli/histoires/le-tombeau-des-lucioles.webp"
+            alt="chateau"
+            class="object-cover w-full rounded-xl"
+            loading="lazy"
+          />
+          <div class="bg-black/40 absolute bottom-0 w-full p-6 rounded-b-xl">
+            <h3>Le Tombeau des lucioles</h3>
+            <p>Un film bouleversant sur l’innocence et l’amour fraternel</p>
+            <button
+              class="btn bg-(--color-primary) mt-1.5 border-hidden"
+              onclick="modal_tombeau.showModal()"
+            >
+              Voir plus
+            </button>
+            <dialog
+              id="modal_tombeau"
+              class="modal modal-bottom sm:modal-middle"
+            >
+              <div class="modal-box md:max-w-5xl lg:max-w-7xl">
+                <form method="dialog">
+                  <button
+                    class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                  >
+                    ✕
+                  </button>
+                </form>
+                <h3 class="text-lg font-bold text-center mb-8">
+                  Le Tombeau des lucioles
+                </h3>
+                <div class="grid grid-cols-1 md: lg:grid-cols-2 gap-4">
+                  <div class="w-96 m-auto md:w-full h-full">
+                    <img
+                      src="./ghibli/histoires/le-tombeau-des-lucioles.webp"
+                      alt="Arrietty, small red dress girl in the garden"
+                      class="object-cover h-full w-full m-auto"
+                      loading="lazy"
+                    />
+                  </div>
+                  <article class="P-8">
+                    <p>Anée: 1988</p>
+                    <p>Durée: 1 h 29 min</p>
+                    <p>Réalisateur: Isao Takahata</p>
+                    <div class="mt-3">
+                      <h4 class="text-l font-bold">Description</h4>
+                      <p>
+                        Deux enfants tentent de survivre seuls pendant la
+                        guerre. Un film bouleversant sur l’innocence, l’amour
+                        fraternel et la perte.
+                      </p>
+                    </div>
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">FR</div>
+                      <div class="badge badge-secondary">EN</div>
+                      <div class="badge badge-accent">ES</div>
+                    </div>
+
+                    <div class="mt-3">
+                      <p>Langue- sous-titres</p>
+                      <div class="badge badge-primary">4K</div>
+                      <div class="badge badge-secondary">HD</div>
+                      <div class="badge badge-accent">HDR</div>
+                    </div>
+
+                    <p class="mt-3">Avis</p>
+                    <div class="flex flex-row">
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/avis-icon.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <p class="mt-3">Disponible sur</p>
+                    <div class="flex flex-row gap-2.5">
+                      <img
+                        src="./ghibli/modale/disney.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/apple-tv.webp"
+                        alt="avis star icon"
+                        class="w-14"
+                        loading="lazy"
+                      />
+                      <img
+                        src="./ghibli/modale/netflix.webp"
+                        alt="avis star icon"
+                        class="w-12"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <h3 class="text-lg font-bold mb-3 mt-4">
+                      La voix des spectateurs
+                    </h3>
+                    <p class="font-medium">Marie</p>
+                    <p>
+                      "Les films du Studio Ghibli ont quelque chose d’unique :
+                      ils arrivent toujours à me transporter dans un autre
+                      monde. Que ce soit l’émotion, la poésie ou la beauté des
+                      paysages, chaque film me donne cette sensation d’évasion
+                      totale. C’est un véritable refuge pour l’imagination."
+                    </p>
+                    <p class="font-medium mt-2">Thomas</p>
+                    <p>
+                      "J’aime la sensibilité des films Ghibli. Ils parlent de la
+                      nature, de l’enfance, de la solitude, de la magie… mais
+                      toujours avec douceur et profondeur. Peu importe le film
+                      que je regarde, je ressors avec le cœur léger et rempli
+                      d’inspiration. C’est ce qui rend ce studio si spécial."
+                    </p>
+                    <div
+                      class="bg-(--color-primary) flex flex-col justify-center content-center p-8 8 6 8 m-10"
+                    >
+                      <h3 class="text-lg font-bold text-center">
+                        Donne ton avis?
+                      </h3>
+                      <p class="text-center">
+                        Clique sur le bouton ci-dessous pour remplir le
+                        formulaire
+                      </p>
+                      <button
+                        class="btn bg-(--color-base-content) mt-1.5 border-hidden text-(--color-base-100)"
+                      >
+                        <a href="opinion.html" class="w-full"
+                          >Donner mon avis
+                        </a>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>
@@ -360,6 +1392,7 @@
             type="checkbox"
             value="synthwave"
             class="toggle theme-controller"
+            checked
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
