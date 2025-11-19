@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=BBH+Sans+Bogle&family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-@import "tailwindcss";
-
+:root:has(input.theme-controller[value="dark"]:checked),
 [data-theme="dark"] {
   color-scheme: dark;
   --color-base-100: #242323;
@@ -10,6 +9,38 @@
   --color-base-content: #f6f4ee;
   --color-primary: #2daa9e;
   --color-primary-content: #f6f4ee;
+  --color-secondary: #a6c48a;
+  --color-secondary-content: #3e3b3b;
+  --color-accent: #f5a6a6;
+  --color-accent-content: oklch(47% 0.157 37.304);
+  --color-neutral: oklch(27% 0.006 286.033);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: oklch(68% 0.169 237.323);
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(69% 0.17 162.48);
+  --color-success-content: oklch(26% 0.051 172.552);
+  --color-warning: oklch(79% 0.184 86.047);
+  --color-warning-content: oklch(28% 0.066 53.813);
+  --color-error: oklch(64% 0.246 16.439);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 1;
+}
+
+:root:has(input.theme-controller[value="light"]:checked),
+[data-theme="light"] {
+  color-scheme: dark;
+  --color-base-100: #f6f4ee;
+  --color-base-200: #f6f4ee;
+  --color-base-300: oklch(92% 0.004 286.32);
+  --color-base-content: #242323;
+  --color-primary: #2daa9e;
+  --color-primary-content: #242323;
   --color-secondary: #a6c48a;
   --color-secondary-content: #3e3b3b;
   --color-accent: #f5a6a6;
@@ -61,13 +92,9 @@
   font-family: "Nunito", Monserrat, sans-serif;
 }
 
-
-
 /* footer */
 .footer {
   & {
     gap: 1rem;
   }
 }
-
-
